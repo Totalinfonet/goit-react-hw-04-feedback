@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from './App.styled';
+import { Statistics } from '../Statistics/Statistics';
 
 export class App extends Component {
   state = {
@@ -44,13 +45,13 @@ export class App extends Component {
         {totalFeedback === 0 ? (
           <p>No feedback given</p>
         ) : (
-          <div>
-            <p>Good: {good}</p>
-            <p>Neutral: {neutral}</p>
-            <p>Bad: {bad}</p>
-            <p>Total: {totalFeedback}</p>
-            <p>Positive feedback: {positiveFeedbackPercentage}%</p>
-          </div>
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={totalFeedback}
+            positivePercentage={positiveFeedbackPercentage}
+          />
         )}
       </Container>
     );
