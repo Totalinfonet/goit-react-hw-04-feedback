@@ -40,7 +40,7 @@ export const OptionButton = styled.button`
   `}
 
 &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     font-style: italic;
   }
 
