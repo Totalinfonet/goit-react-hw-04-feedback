@@ -16,14 +16,36 @@ export const OptionButton = styled.button`
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   font-size: 16px;
-  color: #333;
+  color: whitesmoke;
+  font-weight: bold;
   cursor: pointer;
 
-  &:hover {
-    background-color: #f1f1f1;
+  ${props =>
+    props.color === 'good' &&
+    `
+    background-color: green;
+  `}
+
+  ${props =>
+    props.color === 'neutral' &&
+    `
+    background-color: yellow;
+    color: black;
+  `}
+
+  ${props =>
+    props.color === 'bad' &&
+    `
+    background-color: red;
+  `}
+
+&:hover {
+    opacity: 0.8;
+    font-style: italic;
   }
 
   &:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 `;

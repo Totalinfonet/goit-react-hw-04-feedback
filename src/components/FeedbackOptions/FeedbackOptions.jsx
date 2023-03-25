@@ -5,7 +5,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <OptionsContainer>
       {options.map(option => (
-        <OptionButton key={option} onClick={() => onLeaveFeedback(option)}>
+        <OptionButton
+          key={option}
+          onClick={() => onLeaveFeedback(option)}
+          color={option.toLowerCase()}
+        >
           {option}
         </OptionButton>
       ))}
